@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Summarizer</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+<p><a href="https://amid.co.jp/summary_tool_manual/">マニュアルはこちら</a></p>
     <form action="summay.php" method="post">
         <textarea name="text" rows="20" cols="100" required></textarea>
         <br>
-        <input type="submit" value="要約を実行する">
+        <input type="submit" value="要約を実行する" id="execute" >
     </form>
+    <p>要約するのに、時間が必要です。優しくそっと待ってね。</p>
+
+<!-- ここにjavascriptを実装する-->
+<script type="text/javascript">
+//送信ボタンを押した際に送信ボタンを無効化する（連打による多数送信回避）
+$(function(){
+	$('[type="submit"]').click(function(){
+		$(this).prop('disabled',true);//ボタンを無効化する
+		$(this).closest('form').submit();//フォームを送信する
+	});
+});
+</script>
 </body>
 </html>
