@@ -40,7 +40,7 @@ $summary = '<!DOCTYPE html>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<p><a href="https://amid.co.jp/summary/index.html">入力画面へ戻る（要約文は消えます）</a></p>
+<p><a href="index.html">入力画面へ戻る（要約文は消えます）</a></p>
 <button onclick="cp()">copy</button>
 <script>
 function cp(){
